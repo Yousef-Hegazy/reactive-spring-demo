@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: reactiveWS
+
+  r2dbc:
+    url: r2dbc:h2:file:///./data/db;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE
+    username: test
+    password: test
+
+  sql:
+    init:
+      data-locations: classpath:/schema.sql
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger.html
+#server:
+#  error:
+#    include-binding-errors: always
+#    include-message: always
